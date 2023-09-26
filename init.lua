@@ -18,7 +18,10 @@ return {
   },
 
   -- Set colorscheme to use
-  colorscheme = "astrodark",
+  -- colorscheme = "astrodark",
+  -- colorscheme = "onedark",
+  -- colorscheme = "vim-code-dark",
+  colorscheme = "adwaita",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
@@ -81,5 +84,7 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
-  end,
+
+    vim.fn.setenv('PATH', vim.fn.getenv('PATH') .. ':' .. vim.fn.system('go env GOPATH'))
+  end
 }
